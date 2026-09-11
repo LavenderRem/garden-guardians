@@ -2,6 +2,8 @@
 
 原创手绘风格的浏览器庭院塔防游戏，已完成三关可玩首版。
 
+在线试玩：<https://lavenderrem.github.io/garden-guardians/>。
+
 ## 打开游戏
 
 在资源管理器中进入 `D:\AI\Projects\game-test`，双击 **启动游戏.cmd**。入口会自动启动本机服务并用默认浏览器打开游戏；已有服务时直接复用。
