@@ -18,7 +18,7 @@ export class GardenAudio {
     const group = this.pool.get(name) ?? [];
     let sound = group.find(s => s.paused || s.ended);
     if (!sound && group.length < 3) {
-      sound = new Audio(`/assets/audio/${name}.wav`);
+      sound = new Audio(`${import.meta.env.BASE_URL}assets/audio/${name}.wav`);
       group.push(sound); this.pool.set(name, group);
     }
     if (!sound) return;
@@ -29,7 +29,7 @@ export class GardenAudio {
   startMusic(rush = false) {
     this.stopMusic();
     if (!this.enabled) return;
-    this.music = new Audio(`/assets/audio/music-${rush ? 'rush' : 'garden'}.wav`);
+    this.music = new Audio(`${import.meta.env.BASE_URL}assets/audio/music-${rush ? 'rush' : 'garden'}.wav`);
     this.music.loop = true;
     this.music.volume = this.volume * 0.3;
     void this.music.play().catch(() => {});

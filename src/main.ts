@@ -8,6 +8,7 @@ import { GardenAudio } from './audio';
 
 const $ = <T extends HTMLElement = HTMLElement>(selector: string) => document.querySelector<T>(selector)!;
 const types = Object.keys(PLANTS) as PlantType[];
+const asset = (file: string) => `${import.meta.env.BASE_URL}assets/${file}`;
 let save = readSave();
 const audio = new GardenAudio();
 audio.setVolume(save.volume);
@@ -24,7 +25,7 @@ $('#app').innerHTML = `
     <section id="hud" hidden aria-label="战斗控制">
       <div class="hud-top"><span id="level-title"></span><div class="top-actions"><button data-action="help">玩法说明</button><button id="mute" data-action="mute" aria-label="静音">♪</button><button data-action="pause" class="pause-button">Ⅱ <span>暂停</span></button></div></div>
       <div class="resource-panel">${sunIcon}<span class="resource-label">光露</span><strong id="resource">250</strong></div>
-      <div class="seed-tray">${types.map((type, index) => `<button class="seed-card" data-plant="${type}" aria-label="${PLANTS[type].name}，${PLANTS[type].cost} 光露" title="${PLANTS[type].description}"><kbd>${index + 1}</kbd><img src="/assets/${type}.png" alt=""/><span class="seed-name">${PLANTS[type].name}</span><span class="seed-price">✦ ${PLANTS[type].cost}</span><span class="cooldown-mask"></span><span class="cooldown-text"></span></button>`).join('')}<button class="shovel" data-action="shovel" title="铲除植物，不返还光露" aria-label="铲除植物"><svg viewBox="0 0 40 56" aria-hidden="true"><path d="M17 6h10v11h-10z" fill="none" stroke="currentColor" stroke-width="4"/><path d="M22 17v20" stroke="#be8655" stroke-width="6"/><path d="M9 34h26v8Q24 59 9 44Z" fill="#829a8a" stroke="#405f50" stroke-width="3"/></svg><span>铲除 <kbd>5</kbd></span></button></div>
+      <div class="seed-tray">${types.map((type, index) => `<button class="seed-card" data-plant="${type}" aria-label="${PLANTS[type].name}，${PLANTS[type].cost} 光露" title="${PLANTS[type].description}"><kbd>${index + 1}</kbd><img src="${asset(`${type}.png`)}" alt=""/><span class="seed-name">${PLANTS[type].name}</span><span class="seed-price">✦ ${PLANTS[type].cost}</span><span class="cooldown-mask"></span><span class="cooldown-text"></span></button>`).join('')}<button class="shovel" data-action="shovel" title="铲除植物，不返还光露" aria-label="铲除植物"><svg viewBox="0 0 40 56" aria-hidden="true"><path d="M17 6h10v11h-10z" fill="none" stroke="currentColor" stroke-width="4"/><path d="M22 17v20" stroke="#be8655" stroke-width="6"/><path d="M9 34h26v8Q24 59 9 44Z" fill="#829a8a" stroke="#405f50" stroke-width="3"/></svg><span>铲除 <kbd>5</kbd></span></button></div>
       <div class="level-chip"><small>本次来客</small><strong id="enemy-count">0 / 11</strong><span id="time">00:00</span></div>
       <div class="bottom-bar"><div class="hint"><span class="hint-dot"></span><span id="hint">先种灯铃花，收集光露。</span></div><div class="wave"><span id="wave-label">来客进度</span><div class="wave-track"><div id="wave-fill"></div><i></i><i></i><i></i></div></div></div>
     </section>
@@ -92,7 +93,7 @@ function showMenu() {
       <button class="primary start-button" data-start="${save.unlocked}" ${!ready ? 'disabled' : ''}>${loadFailed ? '加载失败，请刷新' : !ready ? '正在准备庭院…' : save.completed.length ? '继续守护' : '开启第一天'}<span>→</span></button>
       <button class="text-button" data-action="help">第一次来？看看怎么玩 <span>↗</span></button>
     </div>
-    <div class="menu-art" aria-hidden="true"><div class="art-sun"></div><img class="hero-glow" src="/assets/glow.png" alt=""/><img class="hero-shooter" src="/assets/shooter.png" alt=""/><img class="hero-wall" src="/assets/wall.png" alt=""/><div class="garden-note"><span>今日花园手记</span><strong>每一株，都有自己的勇气。</strong><i>四位伙伴 · 三段庭院冒险</i></div></div>
+    <div class="menu-art" aria-hidden="true"><div class="art-sun"></div><img class="hero-glow" src="${asset('glow.png')}" alt=""/><img class="hero-shooter" src="${asset('shooter.png')}" alt=""/><img class="hero-wall" src="${asset('wall.png')}" alt=""/><div class="garden-note"><span>今日花园手记</span><strong>每一株，都有自己的勇气。</strong><i>四位伙伴 · 三段庭院冒险</i></div></div>
     <div class="chapters">${LEVELS.map(level => `<button class="chapter ${level.id > save.unlocked ? 'locked' : ''}" data-start="${level.id}" ${level.id > save.unlocked || !ready ? 'disabled' : ''}><span class="chapter-number">0${level.id}</span><span><small>${save.completed.includes(level.id) ? '已守护 ✓' : level.id > save.unlocked ? '通关前一关解锁' : level.id === 1 ? '初来庭院' : '等待你的守护'}</small><strong>${level.name}</strong></span><span class="chapter-arrow">${level.id > save.unlocked ? '◇' : '↗'}</span></button>`).join('')}</div>
   </section>`, 'menu');
 }
@@ -147,7 +148,7 @@ function resume() {
 function showHelp() {
   helpReturn = battle ? 'pause' : 'menu';
   if (battle) { battle.paused = true; scene.freeze(true); audio.pause(); }
-  openOverlay(`<section class="modal help-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><p class="eyebrow">一份简单的庭院指南</p><h2 id="modal-title">把勇气，种在草坪上。</h2><div class="help-steps"><p><b>01</b><span><strong>收集光露</strong>点击草坪上的金色光球，每颗增加 25 光露。灯铃花能持续生产。</span></p><p><b>02</b><span><strong>布置防线</strong>选择上方卡片，再点草坪种植。射手攻击本行，栗壳挡在前面。</span></p><p><b>03</b><span><strong>守到最后</strong>击退所有来客即可过关。花车每行救场一次，再被突破就会失败。</span></p></div><div class="plant-guide">${types.map(type => `<div><img src="/assets/${type}.png" alt=""/><strong>${PLANTS[type].name}</strong><span>${PLANTS[type].role} · ${PLANTS[type].cost} 光露</span></div>`).join('')}</div><p class="keyboard-tip">1–4 选卡　5 铲除　E 收光露　空格 / Esc 暂停</p><button class="primary" data-action="help-close">记住了，去守护 <span>→</span></button>${volumeControl()}</section>`, 'help');
+  openOverlay(`<section class="modal help-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><p class="eyebrow">一份简单的庭院指南</p><h2 id="modal-title">把勇气，种在草坪上。</h2><div class="help-steps"><p><b>01</b><span><strong>收集光露</strong>点击草坪上的金色光球，每颗增加 25 光露。灯铃花能持续生产。</span></p><p><b>02</b><span><strong>布置防线</strong>选择上方卡片，再点草坪种植。射手攻击本行，栗壳挡在前面。</span></p><p><b>03</b><span><strong>守到最后</strong>击退所有来客即可过关。花车每行救场一次，再被突破就会失败。</span></p></div><div class="plant-guide">${types.map(type => `<div><img src="${asset(`${type}.png`)}" alt=""/><strong>${PLANTS[type].name}</strong><span>${PLANTS[type].role} · ${PLANTS[type].cost} 光露</span></div>`).join('')}</div><p class="keyboard-tip">1–4 选卡　5 铲除　E 收光露　空格 / Esc 暂停</p><button class="primary" data-action="help-close">记住了，去守护 <span>→</span></button>${volumeControl()}</section>`, 'help');
 }
 function showResult() {
   if (!battle) return;

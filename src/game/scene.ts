@@ -2,6 +2,8 @@ import Phaser from 'phaser';
 import { BOARD, ENEMIES, PLANTS, cellX, cellY, type PlantType } from './content';
 import { Battle, type BattleEvent } from './model';
 
+const asset = (file: string) => `${import.meta.env.BASE_URL}assets/${file}`;
+
 export type Selection = PlantType | 'shovel' | null;
 export interface SceneHooks {
   ready(): void;
@@ -24,10 +26,10 @@ export class GardenScene extends Phaser.Scene {
   private lastHud = 0;
   constructor(private hooks: SceneHooks) { super('garden'); }
   preload() {
-    this.load.image('garden', '/assets/garden.webp');
-    for (const type of ['glow', 'wall', 'bomb', 'shooter']) this.load.image(type, `/assets/${type}.png`);
-    this.load.image('seed', '/assets/seed.png');
-    for (const key of ['shooter-idle', 'shooter-shoot', 'enemy-walk']) this.load.spritesheet(key, `/assets/${key}.png`, { frameWidth: 256, frameHeight: 256 });
+    this.load.image('garden', asset('garden.webp'));
+    for (const type of ['glow', 'wall', 'bomb', 'shooter']) this.load.image(type, asset(`${type}.png`));
+    this.load.image('seed', asset('seed.png'));
+    for (const key of ['shooter-idle', 'shooter-shoot', 'enemy-walk']) this.load.spritesheet(key, asset(`${key}.png`), { frameWidth: 256, frameHeight: 256 });
     this.load.on('loaderror', () => this.hooks.failed());
   }
   create() {
