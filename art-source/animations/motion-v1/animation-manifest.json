@@ -1,0 +1,169 @@
+{
+  "status": "离线素材动作样片，未接入游戏",
+  "fps": 20,
+  "frame_size": [
+    256,
+    256
+  ],
+  "rig": {
+    "seedpod": {
+      "leaves": {
+        "pivot": [
+          319,
+          275
+        ],
+        "target": [
+          128,
+          234
+        ],
+        "scale": 0.25
+      },
+      "stem": {
+        "pivot": [
+          70,
+          392
+        ],
+        "target": [
+          128,
+          207
+        ],
+        "scale": 0.17
+      },
+      "head": {
+        "pivot": [
+          300,
+          515
+        ],
+        "target": [
+          128,
+          159
+        ],
+        "scale": 0.26
+      }
+    },
+    "gardener": {
+      "far-leg": {
+        "pivot": [
+          190,
+          48
+        ],
+        "target": [
+          130,
+          166
+        ],
+        "scale": 0.22
+      },
+      "near-leg": {
+        "pivot": [
+          176,
+          48
+        ],
+        "target": [
+          153,
+          166
+        ],
+        "scale": 0.22
+      },
+      "far-arm": {
+        "pivot": [
+          210,
+          60
+        ],
+        "target": [
+          121,
+          115
+        ],
+        "scale": 0.23
+      },
+      "torso": {
+        "pivot": [
+          160,
+          307
+        ],
+        "target": [
+          145,
+          174
+        ],
+        "scale": 0.31
+      },
+      "head": {
+        "pivot": [
+          300,
+          290
+        ],
+        "target": [
+          126,
+          110
+        ],
+        "scale": 0.3
+      },
+      "near-arm": {
+        "pivot": [
+          180,
+          70
+        ],
+        "target": [
+          156,
+          111
+        ],
+        "scale": 0.245
+      },
+      "pot": {
+        "pivot": [
+          82,
+          13
+        ],
+        "target": [
+          177,
+          155
+        ],
+        "scale": 0.2
+      }
+    }
+  },
+  "source_sha256": {
+    "art-source\\cutouts\\transparent-v1\\seedpod\\head.png": "0f9f65640992f82ab674e45395b5d7837d15108f144b85376b985d5a9e018d8a",
+    "art-source\\cutouts\\transparent-v1\\seedpod\\leaves.png": "3c7647875ac3bc894a3df1f4e5901168eb2d187a296af444d731f7bff1a00bf7",
+    "art-source\\cutouts\\transparent-v1\\seedpod\\seed.png": "76e7f5e355cbc6ad64cd3d00281c4a0248d33d7af98e8261011bb1c64bf9849a",
+    "art-source\\cutouts\\transparent-v1\\seedpod\\stem.png": "e6134de012d2a622da44c93d746499b1e8341a3b88dcc8e8c3ebc00da9cce350",
+    "art-source\\cutouts\\transparent-v1\\gardener\\far-arm.png": "8fb3cfcd4d1e20a8d8a4cfdb0b7e8d990d3b958ff3a0e89d430bcedc8beaeb99",
+    "art-source\\cutouts\\transparent-v1\\gardener\\far-leg.png": "533a3dc2c55784ed95437ccac7d6309c423b433cbb8f0bc295d15c551197b5b6",
+    "art-source\\cutouts\\transparent-v1\\gardener\\head.png": "5c541569bf7f2a3e7c488d061ea580ed963b9ef49310578aac1aa0328b1e2d48",
+    "art-source\\cutouts\\transparent-v1\\gardener\\near-arm.png": "0519f963029cb58c3ed0605a9acbfa4c12df4129e2c7a71470fc87531e1861bc",
+    "art-source\\cutouts\\transparent-v1\\gardener\\near-leg.png": "ac01ff7114749efb8d8d6f6a858c07649aff715673109e76e3e2dec947cd4326",
+    "art-source\\cutouts\\transparent-v1\\gardener\\pot.png": "c25b984edc0afe9f00c0ee66a491b4d5b99daaa495b9f38a1bbde63ee7029b52",
+    "art-source\\cutouts\\transparent-v1\\gardener\\torso.png": "9ffd89dd05d5cce9393f66e9487ef53bdacf9f125bfe028f6c6f5cca6d2bf701"
+  },
+  "clips": [
+    {
+      "id": "seedpod-idle",
+      "sheet": "seedpod-idle-sheet.png",
+      "frames": 32,
+      "columns": 8,
+      "duration_ms": 1600,
+      "loop": true
+    },
+    {
+      "id": "seedpod-shoot",
+      "sheet": "seedpod-shoot-sheet.png",
+      "frames": 6,
+      "columns": 6,
+      "duration_ms": 300,
+      "loop": false,
+      "fire_frame": 2
+    },
+    {
+      "id": "gardener-walk",
+      "sheet": "gardener-walk-sheet.png",
+      "frames": 18,
+      "columns": 6,
+      "duration_ms": 900,
+      "loop": true
+    }
+  ],
+  "limits": [
+    "腿部按整体部件旋转，没有膝盖分节",
+    "啃食替换头未采用",
+    "无伤害判定、移动逻辑或音频"
+  ]
+}

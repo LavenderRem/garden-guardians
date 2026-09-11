@@ -1,0 +1,239 @@
+{
+  "method": "局部背景颜色识别及外缘连通填充；保留闭合内部浅色区域；两像素边缘去底色",
+  "excluded": [
+    "gardener/biting-head：原稿右侧帽檐被裁切"
+  ],
+  "groups": {
+    "seedpod": {
+      "source": "drafts\\seedpod-parts-rgb-v1.png",
+      "source_sha256": "16db18e8bdbd6e521998240a00c42a97a2ec2408b2119de1b255cf2fff5f5edc",
+      "atlas": "seedpod-parts-alpha-v1.png",
+      "atlas_size": [
+        1536,
+        1024
+      ],
+      "parts": [
+        {
+          "id": "head",
+          "label": "头部",
+          "file": "transparent-v1\\seedpod\\head.png",
+          "size": [
+            623,
+            555
+          ],
+          "removed_background_pixels": 185838,
+          "preserved_enclosed_neutral_pixels": 351,
+          "partial_alpha_pixels": 2863,
+          "source_bounds": [
+            180,
+            34,
+            787,
+            573
+          ],
+          "transparent_padding": 8
+        },
+        {
+          "id": "stem",
+          "label": "茎",
+          "file": "transparent-v1\\seedpod\\stem.png",
+          "size": [
+            151,
+            428
+          ],
+          "removed_background_pixels": 71190,
+          "preserved_enclosed_neutral_pixels": 0,
+          "partial_alpha_pixels": 1303,
+          "source_bounds": [
+            1048,
+            152,
+            1183,
+            564
+          ],
+          "transparent_padding": 8
+        },
+        {
+          "id": "leaves",
+          "label": "叶片底座",
+          "file": "transparent-v1\\seedpod\\leaves.png",
+          "size": [
+            638,
+            292
+          ],
+          "removed_background_pixels": 104085,
+          "preserved_enclosed_neutral_pixels": 0,
+          "partial_alpha_pixels": 2551,
+          "source_bounds": [
+            124,
+            673,
+            746,
+            949
+          ],
+          "transparent_padding": 8
+        },
+        {
+          "id": "seed",
+          "label": "种子",
+          "file": "transparent-v1\\seedpod\\seed.png",
+          "size": [
+            203,
+            106
+          ],
+          "removed_background_pixels": 23692,
+          "preserved_enclosed_neutral_pixels": 0,
+          "partial_alpha_pixels": 521,
+          "source_bounds": [
+            1044,
+            778,
+            1231,
+            868
+          ],
+          "transparent_padding": 8
+        }
+      ]
+    },
+    "gardener": {
+      "source": "drafts\\gardener-parts-rgb-v1.png",
+      "source_sha256": "b0da058793bf429e14358c9cb814598b546cd8bda6d601a24f39bce8c1b4fb75",
+      "atlas": "gardener-parts-alpha-v1.png",
+      "atlas_size": [
+        1692,
+        930
+      ],
+      "parts": [
+        {
+          "id": "head",
+          "label": "头和帽",
+          "file": "transparent-v1\\gardener\\head.png",
+          "size": [
+            493,
+            355
+          ],
+          "removed_background_pixels": 94529,
+          "preserved_enclosed_neutral_pixels": 96,
+          "partial_alpha_pixels": 2117,
+          "source_bounds": [
+            9,
+            65,
+            486,
+            404
+          ],
+          "transparent_padding": 8
+        },
+        {
+          "id": "torso",
+          "label": "躯干",
+          "file": "transparent-v1\\gardener\\torso.png",
+          "size": [
+            339,
+            353
+          ],
+          "removed_background_pixels": 56647,
+          "preserved_enclosed_neutral_pixels": 2,
+          "partial_alpha_pixels": 1495,
+          "source_bounds": [
+            517,
+            89,
+            840,
+            426
+          ],
+          "transparent_padding": 8
+        },
+        {
+          "id": "far-arm",
+          "label": "远侧手臂",
+          "file": "transparent-v1\\gardener\\far-arm.png",
+          "size": [
+            292,
+            394
+          ],
+          "removed_background_pixels": 100745,
+          "preserved_enclosed_neutral_pixels": 0,
+          "partial_alpha_pixels": 1248,
+          "source_bounds": [
+            940,
+            65,
+            1216,
+            443
+          ],
+          "transparent_padding": 8
+        },
+        {
+          "id": "near-arm",
+          "label": "近侧手臂",
+          "file": "transparent-v1\\gardener\\near-arm.png",
+          "size": [
+            260,
+            377
+          ],
+          "removed_background_pixels": 78835,
+          "preserved_enclosed_neutral_pixels": 3,
+          "partial_alpha_pixels": 1293,
+          "source_bounds": [
+            1348,
+            95,
+            1592,
+            456
+          ],
+          "transparent_padding": 8
+        },
+        {
+          "id": "far-leg",
+          "label": "远侧腿",
+          "file": "transparent-v1\\gardener\\far-leg.png",
+          "size": [
+            284,
+            379
+          ],
+          "removed_background_pixels": 76475,
+          "preserved_enclosed_neutral_pixels": 0,
+          "partial_alpha_pixels": 1649,
+          "source_bounds": [
+            91,
+            488,
+            359,
+            851
+          ],
+          "transparent_padding": 8
+        },
+        {
+          "id": "near-leg",
+          "label": "近侧腿",
+          "file": "transparent-v1\\gardener\\near-leg.png",
+          "size": [
+            260,
+            386
+          ],
+          "removed_background_pixels": 62455,
+          "preserved_enclosed_neutral_pixels": 11,
+          "partial_alpha_pixels": 1487,
+          "source_bounds": [
+            500,
+            493,
+            744,
+            863
+          ],
+          "transparent_padding": 8
+        },
+        {
+          "id": "pot",
+          "label": "花盆",
+          "file": "transparent-v1\\gardener\\pot.png",
+          "size": [
+            179,
+            236
+          ],
+          "removed_background_pixels": 30071,
+          "preserved_enclosed_neutral_pixels": 0,
+          "partial_alpha_pixels": 926,
+          "source_bounds": [
+            936,
+            595,
+            1099,
+            815
+          ],
+          "transparent_padding": 8
+        }
+      ]
+    }
+  }
+}

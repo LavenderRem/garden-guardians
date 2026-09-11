@@ -1,0 +1,230 @@
+{
+  "frames": {
+    "idle": {
+      "count": 32,
+      "bounds_and_alpha": "PASS"
+    },
+    "shoot": {
+      "count": 6,
+      "bounds_and_alpha": "PASS"
+    },
+    "walk": {
+      "count": 18,
+      "bounds_and_alpha": "PASS"
+    }
+  },
+  "loop_exact": {
+    "idle": true,
+    "walk": true
+  },
+  "feet": [
+    {
+      "far-leg": {
+        "bottom": 235,
+        "lift_target": 4.898587196589413e-16
+      },
+      "near-leg": {
+        "bottom": 235,
+        "lift_target": 0.0
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      },
+      "near-leg": {
+        "bottom": 234,
+        "lift_target": 1.3680805733026749
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      },
+      "near-leg": {
+        "bottom": 232,
+        "lift_target": 2.571150438746157
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      },
+      "near-leg": {
+        "bottom": 231,
+        "lift_target": 3.4641016151377544
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      },
+      "near-leg": {
+        "bottom": 231,
+        "lift_target": 3.939231012048832
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      },
+      "near-leg": {
+        "bottom": 231,
+        "lift_target": 3.939231012048832
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      },
+      "near-leg": {
+        "bottom": 231,
+        "lift_target": 3.464101615137755
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      },
+      "near-leg": {
+        "bottom": 232,
+        "lift_target": 2.571150438746158
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      },
+      "near-leg": {
+        "bottom": 234,
+        "lift_target": 1.3680805733026755
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      },
+      "near-leg": {
+        "bottom": 235,
+        "lift_target": 4.898587196589413e-16
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 233,
+        "lift_target": 1.3680805733026724
+      },
+      "near-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 232,
+        "lift_target": 2.5711504387461597
+      },
+      "near-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 232,
+        "lift_target": 3.4641016151377535
+      },
+      "near-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 231,
+        "lift_target": 3.939231012048832
+      },
+      "near-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 231,
+        "lift_target": 3.9392310120488325
+      },
+      "near-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 232,
+        "lift_target": 3.464101615137753
+      },
+      "near-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 232,
+        "lift_target": 2.571150438746156
+      },
+      "near-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      }
+    },
+    {
+      "far-leg": {
+        "bottom": 233,
+        "lift_target": 1.3680805733026749
+      },
+      "near-leg": {
+        "bottom": 235,
+        "lift_target": 0
+      }
+    }
+  ],
+  "source_unchanged": true,
+  "garden-motion-preview.gif": {
+    "frames": 72,
+    "total_ms": 3600
+  },
+  "gardener-walk.gif": {
+    "frames": 18,
+    "total_ms": 900
+  },
+  "seedpod-idle.gif": {
+    "frames": 32,
+    "total_ms": 1600
+  },
+  "seedpod-shoot.gif": {
+    "frames": 36,
+    "total_ms": 1800
+  },
+  "passed": true,
+  "outline_connectivity": {
+    "frames_checked": 56,
+    "largest_component_minimum_fraction": 0.98,
+    "below_threshold_frames": 0
+  },
+  "compressed_preview": {
+    "bytes": 1712335,
+    "decoded_frames": 72,
+    "repeated_cycle_max_rgb_difference": 0
+  }
+}

@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.superpowers/
+output/qa/
+output/launch/
+output/imagegen/

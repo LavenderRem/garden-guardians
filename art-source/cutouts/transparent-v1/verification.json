@@ -1,0 +1,170 @@
+{
+  "parts": [
+    {
+      "group": "seedpod",
+      "id": "head",
+      "size": [
+        623,
+        555
+      ],
+      "alpha_and_padding": "PASS"
+    },
+    {
+      "group": "seedpod",
+      "id": "stem",
+      "size": [
+        151,
+        428
+      ],
+      "alpha_and_padding": "PASS"
+    },
+    {
+      "group": "seedpod",
+      "id": "leaves",
+      "size": [
+        638,
+        292
+      ],
+      "alpha_and_padding": "PASS"
+    },
+    {
+      "group": "seedpod",
+      "id": "seed",
+      "size": [
+        203,
+        106
+      ],
+      "alpha_and_padding": "PASS"
+    },
+    {
+      "group": "gardener",
+      "id": "head",
+      "size": [
+        493,
+        355
+      ],
+      "alpha_and_padding": "PASS"
+    },
+    {
+      "group": "gardener",
+      "id": "torso",
+      "size": [
+        339,
+        353
+      ],
+      "alpha_and_padding": "PASS"
+    },
+    {
+      "group": "gardener",
+      "id": "far-arm",
+      "size": [
+        292,
+        394
+      ],
+      "alpha_and_padding": "PASS"
+    },
+    {
+      "group": "gardener",
+      "id": "near-arm",
+      "size": [
+        260,
+        377
+      ],
+      "alpha_and_padding": "PASS"
+    },
+    {
+      "group": "gardener",
+      "id": "far-leg",
+      "size": [
+        284,
+        379
+      ],
+      "alpha_and_padding": "PASS"
+    },
+    {
+      "group": "gardener",
+      "id": "near-leg",
+      "size": [
+        260,
+        386
+      ],
+      "alpha_and_padding": "PASS"
+    },
+    {
+      "group": "gardener",
+      "id": "pot",
+      "size": [
+        179,
+        236
+      ],
+      "alpha_and_padding": "PASS"
+    }
+  ],
+  "source_hashes_unchanged": true,
+  "sample_checks": [
+    {
+      "group": "seedpod",
+      "point": [
+        580,
+        339
+      ],
+      "alpha": 255,
+      "result": "PASS"
+    },
+    {
+      "group": "seedpod",
+      "point": [
+        456,
+        356
+      ],
+      "alpha": 255,
+      "result": "PASS"
+    },
+    {
+      "group": "seedpod",
+      "point": [
+        10,
+        10
+      ],
+      "alpha": 0,
+      "result": "PASS"
+    },
+    {
+      "group": "gardener",
+      "point": [
+        233,
+        299
+      ],
+      "alpha": 255,
+      "result": "PASS"
+    },
+    {
+      "group": "gardener",
+      "point": [
+        693,
+        194
+      ],
+      "alpha": 255,
+      "result": "PASS"
+    },
+    {
+      "group": "gardener",
+      "point": [
+        1000,
+        620
+      ],
+      "alpha": 0,
+      "result": "PASS"
+    },
+    {
+      "group": "gardener",
+      "point": [
+        1400,
+        700
+      ],
+      "alpha": 0,
+      "result": "PASS"
+    }
+  ],
+  "passed": true
+}
